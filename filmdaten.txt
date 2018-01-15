@@ -1,0 +1,6 @@
+Star Wars;Sci-Fi;cineplex;20:15;18,50€
+Star Wars;Sci-Fi;cineplex;18:00;18,50€
+Star Wars;Sci-Fi;cinestar;20:15;18,50€
+Star Wars;Sci-Fi;cinestar;18:00;18,50€
+Filmzwei;Drama;cineplex;21:00;12;00€
+Filmzwei;Drama;cinestar;14:30;9,50€
