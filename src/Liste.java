@@ -35,20 +35,18 @@ public class Liste {
     }
 
     public void suche1 (String zeile, String eingabe, String eingabe1, String eingabe2, String eingabe3, String eingabe4) {
-        String a = zeile;
-        String c = ";";
-        String b = a.substring(0, a.indexOf(c));
-        if (b.contains(eingabe)) {
-            if (a.contains(eingabe1)) {
-                if (a.contains(eingabe2)) {
-                    if (a.contains(eingabe3)) {
-                        if (a.contains(eingabe4)) {
-                            zeileerstellen(zeile);
-                        }
-                    }
-                }
-            }
+        String searchChar = ";";
+
+        String[] teile = zeile.split(searchChar);
+
+        if(teile[0] == eingabe && teile[1] == eingabe1 && teile[2] == eingabe2 && teile[3] == eingabe3 && teile[4] == eingabe4) {
+            zeileerstellen(zeile); }
+
+                else {
+            System.out.println("not found");
         }
+
+
     }
 
     public void zeileerstellen (String zeile) {
