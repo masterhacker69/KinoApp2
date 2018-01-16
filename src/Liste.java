@@ -37,17 +37,12 @@ public class Liste {
     public void suche1 (String zeile, String eingabe, String eingabe1, String eingabe2, String eingabe3, String eingabe4) {
         String searchChar = ";";
 
+        //-->neue variable anlegen. die variable ist = zeile .wir arbeiten nicht mehr mit ; sondern mit einem anderen zeichen (taste gedrückt ohne caps)
         String[] teile = zeile.split(searchChar);
 
-        if(teile[0].contains(eingabe) && teile[1].contains(eingabe1) && teile[2].contains(eingabe2) && teile[3].contains(eingabe3) && teile[4].contains(eingabe4)) {
-                    zeileerstellen(zeile);
-
+        if (teile[0].contains(eingabe) && teile[1].contains(eingabe1) && teile[2].contains(eingabe2) && teile[3].contains(eingabe3) && teile[4].contains(eingabe4)) {
+            zeileerstellen(zeile);
         }
-
-                else {
-
-        }
-
 
     }
 
@@ -60,6 +55,7 @@ public class Liste {
         neuerFilmeintrag.name= filmeintragAttribute[0];
         neuerFilmeintrag.genre= filmeintragAttribute[1];
         neuerFilmeintrag.kino= filmeintragAttribute[2];
+        filmeintragAttribute[3] = filmeintragAttribute[3].substring(filmeintragAttribute[3].indexOf("§ "));
         neuerFilmeintrag.zeit= filmeintragAttribute[3];
         neuerFilmeintrag.preis= filmeintragAttribute[4];
 
