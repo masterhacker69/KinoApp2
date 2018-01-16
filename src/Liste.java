@@ -39,13 +39,13 @@ public class Liste {
 
         String[] teile = zeile.split(searchChar);
 
-        if(teile[0] == eingabe && teile[1] == eingabe1 && teile[2] == eingabe2 && teile[3] == eingabe3 && teile[4] == eingabe4) {
-            zeileerstellen(zeile);
-            System.out.println(".....gefunden");
+        if(teile[0].contains(eingabe) && teile[1].contains(eingabe1) && teile[2].contains(eingabe2) && teile[3].contains(eingabe3) && teile[4].contains(eingabe4)) {
+                    zeileerstellen(zeile);
+
         }
 
                 else {
-            System.out.println("not found");
+
         }
 
 
