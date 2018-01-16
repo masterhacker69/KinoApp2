@@ -1,7 +1,7 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
+//import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 public class Liste {
@@ -39,7 +39,7 @@ public class Liste {
 
         //-->neue variable anlegen. die variable ist = zeile .wir arbeiten nicht mehr mit ; sondern mit einem anderen zeichen (taste gedrückt ohne caps)
         String[] teile = zeile.split(searchChar);
-
+            //suchfelder stehen von anfang an dort, und erscheinen nicht erst bei eingabe des vorherigen suchfeldes
         if (teile[0].contains(eingabe) && teile[1].contains(eingabe1) && teile[2].contains(eingabe2) && teile[3].contains(eingabe3) && teile[4].contains(eingabe4)) {
             zeileerstellen(zeile);
         }
@@ -52,10 +52,11 @@ public class Liste {
 
                 Filmeintrag neuerFilmeintrag = new Filmeintrag();
 
+
         neuerFilmeintrag.name= filmeintragAttribute[0];
         neuerFilmeintrag.genre= filmeintragAttribute[1];
         neuerFilmeintrag.kino= filmeintragAttribute[2];
-        filmeintragAttribute[3] = filmeintragAttribute[3].substring(filmeintragAttribute[3].indexOf("§ "));
+        filmeintragAttribute[3] = filmeintragAttribute[3].substring(filmeintragAttribute[3].indexOf("§") +1, filmeintragAttribute[3].indexOf("$"));
         neuerFilmeintrag.zeit= filmeintragAttribute[3];
         neuerFilmeintrag.preis= filmeintragAttribute[4];
 
